@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>deploy_tool</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildPlan>
+			<name>org.eclipse.dltk.core.scriptbuilder</name>
+			<arguments>
+			</arguments>
+		</buildPlan>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.dltk.ruby.core.nature</nature>
+	</natures>
+</projectDescription>

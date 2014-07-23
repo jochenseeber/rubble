@@ -1,0 +1,49 @@
+# Usage examples
+
+This document demonstrates the use of rubble to deploy applications.
+
+## Deploy a web application
+
+Configure an environment to deploy a web application:
+
+    environment 'development' do
+        server 'dev.company.com' do
+            deploy webapp('testapp') => tomcat('dev')
+        end
+    end
+
+Now execute the following rubble command:
+
+    # rubble deploy develoment
+
+## Deploy a database
+
+Configure an environment to deploy a database:
+
+    environment 'development' do
+        server 'dev.company.com' do
+            deploy database('testdb') => mysql(:default)
+        end
+    end
+
+Now execute the following rubble command:
+
+    # rubble deploy develoment
+
+## Deploy files
+
+Configure an environment to deploy a the files of a web site:
+
+    fileset 'website' do
+        directory 'site'
+    end
+
+    environment 'development' do
+        server 'dev.company.com' do
+            deploy fileset('website') => directory('/var/lib/www/dev')
+        end
+    end
+
+Now execute the following rubble command:
+
+    # rubble deploy develoment

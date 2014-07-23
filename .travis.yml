@@ -1,0 +1,8 @@
+---
+language: ruby
+cache: bundler
+script: 'bundle exec qed -p coverage'
+rvm:
+  - 1.9.3
+env:
+  - confectionless: 'true'
